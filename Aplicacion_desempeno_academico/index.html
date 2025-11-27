@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Académica</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Sistema de Desempeño Académico</h1>
+                <p>Consulta tu estado académico y restricciones de inscripción</p>
+                <img src="logotipoPUCESE.jpg" alt="Logotipo PUCESE" class="background-logo">
+            </div>
+        </header>
+        <main>
+            <form id="student-form">
+                <label for="student-id">ID Universitario:</label>
+                <input type="text" id="student-id" name="student-id" placeholder="Ingresa tu ID" required>
+                
+                <label for="student-name">Nombre:</label>
+                <input type="text" id="student-name" name="student-name" placeholder="Ingresa tu nombre" required>
+                
+                <button type="submit">Consultar</button>
+            </form>
+            <div id="results" class="hidden">
+                <h2>Resultados</h2>
+                <p id="student-info"></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Materia</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="subjects-table">
+                        <!-- Los datos se llenarán dinámicamente -->
+                    </tbody>
+                </table>
+                <div id="restrictions">
+                    <h3>Restricciones</h3>
+                    <p id="restriction-info"></p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 PUCESE. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
