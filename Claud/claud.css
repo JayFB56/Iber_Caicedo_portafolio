@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #181c1f;
+}
+.container{
+    position: relative;
+    height: 404px;
+    border-bottom: 1px solid #fff;
+}
+.claud{
+    position: relative;
+    top: 50px;
+    width: 320px;
+    height:100px;
+    background: #fff;
+    border-radius: 100px;
+}
+.claud::before{
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 40px;
+    width: 120px;
+    height: 110px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow:90px 0 0 30px #fff;
+}
+.rain{
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+}
+.rain span{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    margin: 0 2px;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    animation-duration: calc(15s / var(--i));
+    transform-origin: bottom;
+}
+.error-message {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: #cb3234;
+}
+@keyframes animate{
+    0%{
+        transform: translateY(0) scale(1);
+    }
+    70%{
+        transform: translateY(275px) scale(1);
+    }
+    100%{
+        transform: translateY(298px) scale(0);
+    }
+}
