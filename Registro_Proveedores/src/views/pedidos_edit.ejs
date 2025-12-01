@@ -1,0 +1,87 @@
+<% include partials/_header %>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <a class="navbar-brand" href="#">Sistema de proveedores</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-5 offset-md-3 card">
+        <div class="card-body">
+          <form action="/updatepedidos/<%= datapedido.idPedido %>" method="POST">
+
+            <div class="form-group">
+              <input type="text" name="idPedido" value="<%= datapedido.idPedido%>" placeholder="Número del Pedido"
+                class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" name="iva" value="<%= datapedido.iva%>" placeholder="%" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" name="costo" value="<%= datapedido.costo%>" placeholder="$" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" id="inputFechaEntrega" name="fechaEntrega" value="<%= datapedido.fechaEntrega%>"
+                placeholder="dd/mm/yyyy" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" id="inputFechaPedido" name="fechaPedido" value="<%= datapedido.fechaPedido%>"
+                placeholder="dd/mm/yyyy" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" name="contidadPedido" value="<%= datapedido.contidadPedido%>" placeholder="En piezas"
+                class="form-control">
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">
+              Guardar cambios del pedido
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Asegúrate de que tus campos de fecha tengan los IDs: inputFechaEntrega y inputFechaPedido
+
+        const idsFechas = ['inputFechaEntrega', 'inputFechaPedido'];
+
+        idsFechas.forEach(id => {
+            const input = document.getElementById(id);
+            if (input) {
+                input.addEventListener('input', function(e) {
+                    let valor = e.target.value.replace(/\D/g, ''); // 1. Elimina caracteres no numéricos
+                    let longitud = valor.length;
+                    let nuevoValor = '';
+
+                    // 2. Aplica el formato dd/mm/yyyy
+                    if (longitud > 0) {
+                        nuevoValor += valor.substring(0, 2); // dd
+                    }
+                    if (longitud >= 3) {
+                        nuevoValor += '/' + valor.substring(2, 4); // /mm
+                    }
+                    if (longitud >= 5) {
+                        nuevoValor += '/' + valor.substring(4, 8); // /yyyy
+                    }
+
+                    // 3. Limita a 10 caracteres (dd/mm/yyyy)
+                    e.target.value = nuevoValor.substring(0, 10);
+                });
+            }
+        });
+    });
+    </script>
+  <% include partials/_footer %>

@@ -1,0 +1,29 @@
+
+.principal{
+    padding: 0px;
+    border: 0px;
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+}
+div .container{
+    padding-top: 100px;
+
+
+}
+
+
+
+
+
+
+.navbar-expand-lg, .navbar-custom {
+    background: #00D4FF;
+    background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(0,212,255,1) 0%, rgba(0,212,255,1) 0%, rgba(0,212,255,1) 55%, rgba(0,212,255,1) 86%);
+    border-bottom: none;
+}
+
+#btn-regresar{
+    background-color: purple;
+    color: #fff;
+  }

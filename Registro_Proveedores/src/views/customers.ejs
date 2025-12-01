@@ -1,0 +1,364 @@
+<% include partials/_header %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sistema Proveedores</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <LINK REL=StyleSheet HREF="styledash.css" >
+</head>
+<body>
+        <div id="viewport">
+                <!-- Sidebar -->
+                <div id="sidebar">
+                  <header>
+                    <a href="#inicio">Provedius</a>
+                    <main class="container">
+                            <div class="row">
+                                <div class="sidebar text-center">
+                                    <img src="/Img/userr.png" width="140" height="140" class="img-circle">
+                                    <p></p>
+                                    <h3>Administrador</h3>
+                                </div>
+                                <div class="content">
+                                    </p>
+                                </div>
+                            </div>
+                        </main>
+                    <p></p>
+                  </header>
+                  <hr width=100 color="#fff">
+                  <ul class="nav">
+                    
+                      <a href="#proveedores">
+                        <i class="zmdi zmdi-link"></i> Proveedores
+                      </a>
+                    
+                    
+                      <a href="#productos">
+                        <i class="zmdi zmdi-link"></i> Productos
+                      </a>
+                
+                    
+                      <a href="#pedidos">
+                        <i class="zmdi zmdi-link"></i> Pedidos
+                      </a>
+                    
+                  </ul>
+                </div>
+                <div class="contenido">
+                        <section class="secinicio">
+                                
+                            <form>
+                                
+                                <div class="headerCont">
+                                        <h2 id="inicio"><strong>Sistema de Proveedores</strong></h2>
+                                        <h5>
+                                          <small class="text-muted">Gestione proveedores, productos y pedidos de manera eficiente y profesional.</small>
+                                        </h5>
+                                        <div class="botones">
+                                          <button type="button" onclick="location.href='/inicio'"class="custom-btn btn-danger">Cerrar Sesion</button>
+                                          <button type="button" class="custom-btn btn-success" onclick="location.href='/register'">Añadir usuario</button>
+                                  </div>
+                                </div>
+                                
+                                <p></p>
+                                <p></p>
+                                <div class="descripcion">
+                                       
+                                            <div class="Conteninicio">
+                                                    <button type="button" class="btn-inicio"  onclick="location.href='#proveedores'" >
+                                                            <img src="./Img/proveedor.png" />
+                                                            
+                                                    </button>
+                                                    <h5>Proveedores</h5>
+                                                    <h6><small  class="text-muted">  Aqui podras controlar los proveedores de la empresa como su nombre , numero etc. </small> </h6>
+                                            </div>
+                                            <div class="Conteninicio">
+                                                    <button type="button" class="btn-inicio"  onclick="location.href='#productos'"  >
+                                                            <img src="./Img/producto.png" />
+                                                    </button>
+                                                    <h5>Productos</h5>
+                                                    <h6><small  class="text-muted">  Aqui podras controlar los productos que los proveedores entregaran como su nombre etc. </small> </h6>
+                                            </div>
+                                            <div class="Conteninicio">
+                                                    <button type="button" class="btn-inicio"  onclick="location.href='#pedidos'"  >
+                                                            <img src="./Img/pedido.png" />
+                                                    </button>
+                                                    <h5>Pedidos</h5>
+                                                    <h6><small  class="text-muted">  Aqui podras controlar los pedidos que haran los proveedores de los productos. </small> </h6>
+                                            </div>
+                                </div>
+                                    
+                            </form>
+            
+                        </section>
+                        
+                        
+                        <section class="secproveedores">
+                            <h2 class="subtitle"   id="proveedores">Proveedores</h2>
+                            <p></p>
+                            <h4 class="subtitle"   id="proveedores">Registro del domicilio fiscal de los proveedores</h4>
+                            <h6>Deberas ingresar primero el domicilio de la empresa</h6>
+                            <p></p>
+                                <form id="Proveedores-direccion" action="/addDireccion" method="post">
+                                        <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                            <label for="inputEmail4">Id Domicilio</label>
+                                            <input type="text" class="form-control" name="idDomicilio">
+                                          </div>
+                                          <div class="form-group col-md-4">
+                                                <label for="inputCity">Ciudades</label>
+                                                <select id="inputCity" class="form-control" name="ciudad">
+                                                  <option selected>Selecciona</option>
+                                                  <option>Quito</option>
+                                                  <option>Guayaquil</option>
+                                                  <option>Cuenca</option>
+                                                  <option>Ambato</option>
+                                                  <option>Manta</option>
+                                                  <option>Portoviejo</option>
+                                                  <option>Machala</option>
+                                                  <option>Loja</option>
+                                                  <option>Esmeraldas</option>
+                                                  <option>Riobamba</option>
+                                                </select> 
+                                              </div>
+                                          <div class="form-group col-md-6">
+                                            <label for="inputPassword4">Municipio</label>
+                                            <input type="text" class="form-control" name="municipio">
+                                          </div>
+                                          <div class="form-group col-md-2">
+                                                <label for="inputZip">Codigo Postal</label>
+                                                <input type="text" class="form-control" id="" name="cp">
+                                         </div>
+                                         <div class="form-group col-md-6">
+                                             <label for="inputPassword4">Colonia</label>
+                                             <input type="text" class="form-control" name="colonia">
+                                         </div>
+                                         <div class="form-group col-md-6">
+                                            <label for="inputPassword4">Calle</label>
+                                            <input type="text" class="form-control" name="calle">
+                                         </div>
+                                         <div class="form-group col-md-2">
+                                             <label for="inputZip"> Numero</label>
+                                             <input type="text" class="form-control" name="numero">
+                                         </div>
+                                         
+                                        </div>
+                                        <button type="submit" class="btn" id="btn-color" >Registrar direccion</button>
+
+                                        <p></p>
+                                 </form>
+
+
+
+
+                             <form id="Proveedores-responsable" action="/addResponsable" method="post">
+                              <h4 class="subtitle"   id="proveedores">Registro de responsables</h4>
+                                    <h6>Deberas ingresar un responsable de la empresa la empresa</h6>
+                                    <div class="form-row">
+                                                                
+                                        <div class="form-group col-md-12">
+                                          <label for="inputAddress">Rfc</label>
+                                          <input type="text" class="form-control" name="rfc" placeholder="rfc">
+                                        </div>
+                                        <p></p>
+                                        <div class="form-group col-md-4">
+                                          <label for="inputAddress2">Nombre</label>
+                                          <input type="text" class="form-control" name="nombre_responsable" >
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                                <label for="inputAddress2">Apellido paterno</label>
+                                                <input type="text" class="form-control" name="apellidoP" >
+                                              </div>
+                                              <div class="form-group col-md-4">
+                                                    <label for="inputAddress2">Apellido paterno</label>
+                                                    <input type="text" class="form-control" name="apellidoM">
+                                                  </div>
+                                            
+                                    </div>
+                                    <button type="submit" class="btn " id="btn-color1"   >Registrar responsable</button>
+                                    <p></p>
+                                    </form>
+
+                                    <form  id="Proveedores-registro" action="/addProveedor" method="POST">
+                                      <h4 class="subtitle"   id="proveedores">Registro de Proveedores</h4>
+                                            <h6>Datos del proveedor (empresa)</h6>
+                                            <div class="form-row">
+                                               
+                                                <div class="form-group col-md-6">
+                                                        <label for="inputAddress">Nombre</label>
+                                                        <input type="text" class="form-control" name="nombre_empresa" placeholder="proveedor x">
+                                                      </div>
+                                                
+                                                <div class="form-group col-md-4">
+                                                  <label for="inputAddress2">Telefono</label>
+                                                  <input type="number" class="form-control" name="telefono" placeholder=" 5522880000">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                        <label for="inputEmail4">Id Domicilio</label>
+                                                        <input type="text" class="form-control" name="idDomicilio" placeholder="123456789">
+                                                      </div>
+                                                      <div class="form-group col-md-6">
+                                                            <label for="inputEmail4">Id producto</label>
+                                                            <input type="text" class="form-control" name="idProductos" placeholder="id del producto que nos vendera">
+                                                          </div>
+                                                                         
+                                        <div class="form-group col-md-12">
+                                                <label for="inputAddress">Rfc</label>
+                                                <input type="text" class="form-control" name="rfc" placeholder="rfc del responsable de la empresa">
+                                              </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">Registrar Proveedor</button>
+                                            </form>
+                                    <p></p>
+                                        
+                            </form>
+                            <form id="Consulta-proveedores">
+
+                              <h2 class="subtitle"   id="proveedores">Proveedores</h2>
+                            <h6>Aqui podras consultar, editar y eliminar datos de los proveedores</h6>
+                            <table  class="table table-bordered table-hover">
+                              <thead>
+                                <tr>
+                                  <th>Id Proveedores</th>
+                                  <th>Nombre empresa</th>
+                                  <th>Telefono</th>
+                                  <th>Id Domicilio</th>
+                                  <th>Id Productos</th>
+                                  <th>Rfc</th>
+                                  <th>Accion</th>
+                                </tr>
+                              </thead>
+                              <tbody >
+                                <% if (typeof error !== 'undefined' && error) { %>
+                                  <div class="alert alert-danger"><%= error %></div>
+                                <% } %>
+                                <% if (typeof msg !== 'undefined' && msg) { %>
+                                  <div class="alert alert-success"><%= msg %></div>
+                                <% } %>
+                                <% if (data && data.length) { %>
+                                  <% for(var i = 0; i < data.length; i++) { %>
+                                    <tr>
+                                        
+                                      <td><%= data[i].idProveedores %></td>
+                                      <td><%= data[i].nombre_empresa %></td>
+                                      <td><%= data[i].telefono %></td>
+                                      <td><%= data[i].idDomicilio %></td>
+                                      <td><%= data[i].idProductos %></td>
+                                      <td><%= data[i].rfc %></td>
+                                      <td>
+                                        <a href="/update/<%= data[i].idProveedores %>" class="btn btn-info">Edit</a>
+                                        <a href="/delete/<%= data[i].idProveedores %>" class="btn btn-danger">Delete</a>
+                                      </td>
+                                    </tr>
+                                  <% } %>
+                                <% } %>
+                              </tbody>
+                            </table>
+                            
+                
+                        </section>
+
+                            </form>
+                            
+                                
+                        <section class="secproductos">
+                                <h2 class="subtitle" id="productos">Productos</h2>
+                                <form action="/addProducto" method="post">
+                                  <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                      <label for="inputEmail4">Id Productos</label>
+                                      <input type="text" class="form-control" name="idProductos" placeholder="Producto789">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label for="inputEmail4">Nombre producto</label>
+                                      <input type="text" class="form-control" name="nombre_producto" placeholder="Producto x">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="inputZip">Cantidad existente</label>
+                                      <input type="text" class="form-control"  name="cantidadExistente">
+                               </div>
+                               <div class="form-group col-md-2">
+                                <label for="inputZip"> Precio</label>
+                                <input type="text" class="form-control"  name="precio" placeholder="$$$$">
+                         </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputAddress">Proveedor</label>
+                          <select class="form-control" name="idProveedores" required>
+                            <option value="">Seleccione proveedor</option>
+                            <% if (providers && providers.length) { %>
+                              <% for (var p = 0; p < providers.length; p++) { %>
+                                <option value="<%= providers[p].idProveedores %>"><%= providers[p].idProveedores %> - <%= providers[p].nombre_empresa %></option>
+                              <% } %>
+                            <% } %>
+                          </select>
+                        </div>
+                                   
+                                  </div>
+                                  <button type="submit" class="btn btn-success"  >Registrar Producto</button>
+                                  <a onclick="location.href='/ConsultaProductos'" href="/listaProductos" type="sumit" class="btn btn-warning">Consultar</a>
+                                  <p></p>
+                           </form>
+                           <form action="" method=""> 
+                      </section>
+
+                          </form>
+                        </section>
+                    
+                        <section class="secpedido">
+                                <h2 class="subtitle"  id="pedidos">Pedidos</h2>
+                                <form action="/addPedido" method="post">
+                                  <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                      <label for="inputEmail4">Id Pedido</label>
+                                      <input type="text" class="form-control" name="idPedido" placeholder="Pedido789">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="inputZip">Iva</label>
+                                      <input type="text" class="form-control"  name="iva" placeholder="$$">
+                               </div>
+                               <div class="form-group col-md-4">
+                                <label for="inputZip">Costo</label>
+                                <input type="text" class="form-control"  name="costo" placeholder="$$$$">
+                                 </div>
+                                    
+                                    <div class="form-group col-md-4">
+                                      <label for="inputZip">Cantidad pedido</label>
+                                      <input type="text" class="form-control"  name="contidadPedido" placeholder="En piezas">
+                               </div>
+                               <div class="form-group col-md-4">
+                                <label for="inputZip">Fecha Entrega</label>
+                                <input type="text" class="form-control"  name="fechaEntrega" placeholder="dd/mm/yyyy">
+                         </div>
+                         <div class="form-group col-md-4">
+                            <label for="inputZip">Fecha Pedido</label>
+                            <input type="text" class="form-control"  name="fechaPedido" placeholder="dd/mm/yyyy">
+                     </div>
+                               
+                         <div class="form-group col-md-4">
+                          <label for="inputAddress">idProductos</label>
+                          <input type="text" class="form-control" name="idProductos" placeholder="proveedor15">
+                        </div>
+                                   
+                                  </div>
+                                  <button type="submit" class="btn btn-success"  >Registrar pedido</button>
+                                  <a onclick="location.href='/ConsultaPedidos'" href="/listaPedidos" type="sumit" class="btn btn-warning">Consultar</a>
+                                  <p></p>
+
+                           </form>
+                       
+                         
+                          
+                        </section>
+                </div>
+                            
+                </div>
+              </div>
+
+            
+
+<% include partials/_footer %>
