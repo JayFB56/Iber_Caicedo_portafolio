@@ -41,6 +41,17 @@ Nota: Estas credenciales se crean automáticamente al iniciar la app si no se de
 
 <img width="1173" height="609" alt="image" src="https://github.com/user-attachments/assets/08a72c21-43e5-448b-b58b-4151dea7c944" />
 
+<img width="1345" height="645" alt="image" src="https://github.com/user-attachments/assets/49992e27-de99-4327-9549-3af392c68a14" />
+
+<img width="1313" height="622" alt="image" src="https://github.com/user-attachments/assets/8171579d-8b04-4d01-928e-43db3bfce3d4" />
+
+<img width="1319" height="609" alt="image" src="https://github.com/user-attachments/assets/d220dad6-9e7c-425b-bd7e-3cf5cd40c456" />
+
+<img width="1365" height="609" alt="image" src="https://github.com/user-attachments/assets/e2510171-745e-473e-9cb6-6f1711c6e950" />
+<img width="1351" height="630" alt="image" src="https://github.com/user-attachments/assets/ef5b2f78-377d-42d3-85c7-38761b89f0c7" />
+
+<img width="1348" height="591" alt="image" src="https://github.com/user-attachments/assets/cec9778b-4100-4c04-9675-bc8493b9ff3b" />
+
 <img width="1352" height="646" alt="image" src="https://github.com/user-attachments/assets/f98f20a7-1d40-458e-b5d9-568f2b2c490e" />
 
 <img width="1349" height="350" alt="image" src="https://github.com/user-attachments/assets/313ddde8-548a-4fc1-ad17-3e7074749de8" />
