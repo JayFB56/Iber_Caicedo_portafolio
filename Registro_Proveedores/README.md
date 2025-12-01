@@ -37,11 +37,13 @@ Nota: Estas credenciales se crean automáticamente al iniciar la app si no se de
 
 <h2>Imagenes del proyecto</h2>
 
-![Preview](https://raw.githubusercontent.com/ErickRV19/crud-nodejs-mysql/master/previews/Screenshot_2020-05-08%20Nodejs%20Mysql%20CRUD.png "Preview")
+<img width="1348" height="630" alt="image" src="https://github.com/user-attachments/assets/66fd6aac-4984-4483-97b2-0e3021bc9dee" />
 
-![Preview2](https://raw.githubusercontent.com/ErickRV19/crud-nodejs-mysql/master/previews/captura2.png "Preview 2")
+<img width="1173" height="609" alt="image" src="https://github.com/user-attachments/assets/08a72c21-43e5-448b-b58b-4151dea7c944" />
 
-![Preview](https://raw.githubusercontent.com/ErickRV19/crud-nodejs-mysql/master/previews/captura1.png "Preview")
+<img width="1352" height="646" alt="image" src="https://github.com/user-attachments/assets/f98f20a7-1d40-458e-b5d9-568f2b2c490e" />
+
+<img width="1349" height="350" alt="image" src="https://github.com/user-attachments/assets/313ddde8-548a-4fc1-ad17-3e7074749de8" />
 
 
 
